@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="82659" started-at="2016-09-11T13:03:29Z" finished-at="2016-09-11T13:04:52Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="82659" started-at="2016-09-11T13:03:29Z" finished-at="2016-09-11T13:04:52Z">
+      <class name="com.org.LearningMaven.Login">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.org.LearningMaven.Login@77caeb3e]" name="setup" is-config="true" duration-ms="12821" started-at="2016-09-11T18:33:29Z" finished-at="2016-09-11T18:33:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="WelcomeScreenNavigation()[pri:1, instance:com.org.LearningMaven.Login@77caeb3e]" name="WelcomeScreenNavigation" duration-ms="31463" started-at="2016-09-11T18:33:42Z" finished-at="2016-09-11T18:34:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WelcomeScreenNavigation -->
+        <test-method status="PASS" signature="ForgotPassword()[pri:2, instance:com.org.LearningMaven.Login@77caeb3e]" name="ForgotPassword" duration-ms="38341" started-at="2016-09-11T18:34:14Z" finished-at="2016-09-11T18:34:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ForgotPassword -->
+      </class> <!-- com.org.LearningMaven.Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
