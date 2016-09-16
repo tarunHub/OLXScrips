@@ -6,6 +6,7 @@
       <class name="com.org.LearningMaven.Login">
         <methods>
           <include name="ForgotPassword"/>
+          <include name="WelcomeScreenNavigation"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.org.LearningMaven.Login -->
