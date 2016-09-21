@@ -2,8 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-
 import io.appium.java_client.android.AndroidDriver;
 
 public class FacebookScreen extends BasePage {

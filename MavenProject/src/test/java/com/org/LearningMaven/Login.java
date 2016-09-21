@@ -5,13 +5,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import junit.framework.Assert;
@@ -160,6 +158,13 @@ User Sign in facebook
 		objForgotPasswordScreen.clickSubmitOTPBtn();
 		objForgotPasswordScreen.setPassword("tarunolx");
 		objForgotPasswordScreen.clickSubmitPassword();
+		String expected = "LOG OUT";
+		String actual = objLogoutScreen.logoutText();
+		objLogoutScreen.clickLogoutButton();
+		Assert.assertEquals(expected, actual);
 		}	
-	
+	@AfterTest
+	public void quitSetup(){
+		driver.close();
+	}
 }

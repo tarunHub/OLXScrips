@@ -1,8 +1,5 @@
 package com.org.LearningMaven;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
