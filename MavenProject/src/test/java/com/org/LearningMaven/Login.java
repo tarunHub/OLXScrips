@@ -35,16 +35,20 @@ public class Login {
 	RegisterScreen objRegisterScreen;
 SMSScreen objSMSScreen;
 ForgotPasswordScreen objForgotPasswordScreen;
+
 	@BeforeTest
 
 	public void setup() throws MalformedURLException {
-		File appDir = new File("/home/tarun/Downloads");
-		File app = new File(appDir, "OLX_v4.0.7.apk");
+		File classpathRoot = new File(System.getProperty("user.dir"));
+		File appDir = new File(classpathRoot, "/apps");
+		File app1 = new File(appDir, "olx.apk");
+		File app2 = new File(appDir, "sms.apk");
+		System.out.println(app1.getAbsolutePath());
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android device");
 		// cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "4000");
-		cap.setCapability(MobileCapabilityType.APP, app);
+		cap.setCapability(MobileCapabilityType.APP, app1);
 		// cap.setCapability("noReset", true);
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -147,6 +151,13 @@ User Sign in facebook
 }*/
 	@Test(priority = 2)
 	public void ForgotPassword() throws InterruptedException {
+		File classpathRoot = new File(System.getProperty("user.dir"));
+		File appDir = new File(classpathRoot, "/apps");
+		File app2 = new File(appDir, "sms.apk");
+		System.out.println(app2.getAbsolutePath());
+		driver.installApp(app2.getAbsolutePath());
+		
+	//	Thread.sleep(20000);
 		String otp;
 		objLeftMenuScreen.clickLeftMenuIcon();
 		objLeftMenuScreen.clickWelcomeToOlxOption();
